@@ -1,0 +1,20 @@
+version: '1.0'
+
+services:
+
+  ticket-backend:
+    image:  apajon/ticket-ideal-backend-ec2:latest
+    environment:
+      AWS_REGION: us-east-1
+      AWS_SECRET_ACCESS_KEY: x4bEvfrgdXepHGcUzlt+kpbRgI1fLUDVjbghL/Sk
+      AWS_ACCESS_KEY_ID: ASIAZROVKZRNRB7RQRON
+      AWS_SESSION_TOKEN: FwoGZXIvYXdzENT//////////wEaDFcA5/ZjIpwpdqXX+yLMAdwPID4W5+hDfeaKVs1FR/id2XdzFDlb7FCyPsQaC6sGrck7SZ8mND4vvEFerafatTZE0SF8gkz/DxcCwMwSkPY846kehK2b9lzLGlw5uDCbmfF+/zPXrok+S2aiJPMbp/NynouL+ZjYkj8rDBwJIW0J173ydkJgDNg1LBbHVPlQCZXXgg6M/wYFn48jeItIOgmARmmsgBfJKK0UsxZJN5NQh2RbUa6X9vybYD4enK3uw16qJZ8n5amGUPSZu8P4U+hqrvqAtZxsmxOi/ijxhsupBjItCcPo0zUVLpGxeH/l+HRz5Eb/4aFNRbUx4hJejMJl/VFP42NRPEPnJ/ec+qW6
+    ports:
+      - "3000:3000"
+    restart: always
+    networks:
+      - ticket-ideal
+
+networks:
+  ticket-ideal:
+
